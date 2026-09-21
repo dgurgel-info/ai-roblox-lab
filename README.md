@@ -18,21 +18,6 @@ Assista ao processo completo de criação, bastidores, erros e lições aprendid
 **[▶️ Como fazer um jogo VIRAL no Roblox com IA (E o resultado me surpreendeu...) 🤖🎮](https://youtu.be/POzYDoPPEII)**  
 *Canal: [@dgurgel-info](https://www.youtube.com/@dgurgel-info)*
 
-### Destaques do Experimento:
-- **Pergunta norteadora**: *Será que uma pessoa sem experiência prévia com a engine do Roblox Studio consegue criar um jogo funcional, complexo e jogável utilizando apenas IA?*
-- **Tempo de desenvolvimento**: Aproximadamente **20 horas de iteração contínua**.
-- **Resultado**: Uma experiência multiplayer completa e auditada para até 16 jogadores simultâneos, estruturada em **15 fases de implantação** com arquitetura profissional Rojo/Luau.
-- **Linha do Tempo do Vídeo**:
-  - `00:00` — Introdução: Jogo do Roblox criado 100% por IA
-  - `01:30` — Preparando a integração do Roblox Studio com MCP (Model Context Protocol)
-  - `02:30` — Tempo de desenvolvimento e modelos de IA (Codex, GPT e Gemini)
-  - `04:06` — Configuração técnica da IA no Roblox Studio
-  - `05:01` — Primeiro erro: A falta de referências visuais
-  - `06:01` — Lógica do jogo e teste dos NPCs
-  - `07:58` — Adicionando referências visuais
-  - `08:45` — Fase de refinamento, ajustes e iluminação dinâmica
-  - `11:35` — Conclusão e o futuro do desenvolvimento de games com IA
-
 ---
 
 ## 🤖 O Processo de Criação com IA (Multi-Agentes)
@@ -95,9 +80,9 @@ A grande inovação metodológica demonstrada no projeto é a **orquestração d
 
 ---
 
-## 🎮 Sobre o Jogo: Blackwood Heist
+## 🎮 Sobre o Jogo: Mansão Heist
 
-**Blackwood Heist** é uma experiência multiplayer cooperativa/competitiva de assalto tático no Roblox. Os jogadores infiltram a suntuosa mansão **Blackwood Estate**, burlam a segurança privada, roubam itens valiosos do cofre principal e devem escapar antes que o cerco policial seja concluído.
+**Mansão Heist** é uma experiência multiplayer cooperativa/competitiva de assalto tático no Roblox. Os jogadores infiltram a suntuosa mansão, burlam a segurança privada, roubam itens valiosos do cofre principal e devem escapar antes que o cerco policial seja concluído.
 
 ### Filosofia Central:
 - **Tensão de Decisão**: A dificuldade não vem de punições arbitrárias, mas de escolhas: *por onde entrar, quanto loot carregar, aceitar perder velocidade pelo valor do saque, ou largar a bolsa física para correr mais rápido*.
@@ -109,7 +94,7 @@ A grande inovação metodológica demonstrada no projeto é a **orquestração d
 
 ---
 
-## 🏆 As 15 Fases de Implantação (100% Concluídas)
+## 🏆 As 15 Fases de Implantação
 
 O desenvolvimento foi segmentado e auditado fase por fase diretamente no Roblox Studio via Rojo. Abaixo está o resumo técnico das 15 fases:
 
