@@ -135,90 +135,33 @@ O desenvolvimento foi segmentado e auditado fase por fase diretamente no Roblox 
 
 ## 📁 Estrutura do Repositório
 
-O projeto segue a estrutura padrão do ecossistema [Rojo](https://rojo.space/):
-
 ```text
 ai-roblox-lab/
-├── assets/                          # Pasta para modelos 3D, imagens de referência e plantas
-│   ├── images/                      # Imagens conceituais e mockups de UI
-│   ├── models/                      # Modelos 3D (.obj, .fbx, .rbxm) e referências de malha
-│   └── references/                  # Prompts, tabelas de design e capturas do Studio
-│
-├── src/                             # Código-fonte Luau estruturado
-│   ├── ReplicatedStorage/
-│   │   └── Blackwood/
-│   │       └── Shared/
-│   │           ├── Enums.lua        # Estados da rodada, raridades, ferramentas e arquétipos
-│   │           ├── GameConfig.lua   # Configuração centralizada de física, tempos e balanceamento
-│   │           └── ItemDefinitions.lua # Catálogo completo de itens e pesos
-│   │
-│   ├── ServerScriptService/
-│   │   ├── BlackwoodServer.server.lua # Ponto de entrada do servidor
-│   │   └── Services/
-│   │       ├── ArrestService.lua    # Mecânica gradual de prisão e teleporte
-│   │       ├── DropBagService.lua   # Instanciação e recolhimento de bolsas físicas 3D
-│   │       ├── EscapeService.lua    # Gestão de rotas de fuga alternativas
-│   │       ├── ExtractionService.lua# Validação de zonas normais de extração
-│   │       ├── GuardService.lua     # Inteligência artificial da segurança privada
-│   │       ├── InteractionService.lua # Prompts de interação e controle atômico
-│   │       ├── InventoryService.lua # Inventário, cálculo de peso e penalidade de velocidade
-│   │       ├── LootService.lua      # Distribuição e bloqueio atômico de saque
-│   │       ├── PlayerDataService.lua# Persistência resiliente com proteção Anti-Wipe
-│   │       ├── PoliceAIService.lua  # IA policial com 3 arquétipos e blackboard tático
-│   │       ├── PoliceService.lua    # Spawns, viaturas e sirenes espaciais 3D
-│   │       ├── RoundService.lua     # Máquina de estados de rodada (11 estados)
-│   │       └── SecurityService.lua  # Câmeras, propagação sonora e Lockdown
-│   │
-│   ├── StarterGui/
-│   │   └── MainHUD/
-│   │       └── HUD.client.lua       # Interface do usuário, modais de skills e loja
-│   │
-│   └── StarterPlayer/
-│       └── StarterPlayerScripts/
-│           └── Controllers/
-│               └── DropBagController.client.lua # Captura de input (tecla G) e notificações locais
-│
-├── Plan.md                          # Documento completo de engenharia e auditoria das 15 fases
+├── assets/                          # Pasta dedicada para imagens de referência, plantas e modelos 3D
+├── Plan.md                          # Plano de implantação completo (15 fases), prompts e auditoria técnica
 ├── LICENSE                          # Licença MIT
-└── README.md                        # Documentação principal
+└── README.md                        # Documentação do projeto, bastidores e metodologia multi-agente
 ```
 
 ---
 
-## 🚀 Como Executar o Projeto no Roblox Studio
+## 🚀 Como Utilizar Este Laboratório
 
-### Pré-requisitos
-1. [Roblox Studio](https://www.roblox.com/create) instalado.
-2. [Rojo CLI](https://rojo.space/docs/v7/getting-started/installation/) ou extensão do VS Code/Cursor.
-3. Plugin do Rojo instalado no Roblox Studio.
+1. **Estudo de Metodologia e Prompts**:
+   - Consulte o [`Plan.md`](Plan.md) para ver a decomposição das 15 fases, regras táticas de IA, fórmulas matemáticas e auditoria completa de cada sistema.
+   - Utilize a metodologia de múltiplos agentes (Arquiteto, Engenheiro, Auditor e Integrador) para construir ou evoluir seus próprios jogos no Roblox Studio.
 
-### Passo a Passo
-
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/dgurgel-info/ai-roblox-lab.git
-   cd ai-roblox-lab
-   ```
-
-2. **Inicie o servidor do Rojo**:
-   ```bash
-   rojo serve
-   ```
-
-3. **Conecte com o Roblox Studio**:
-   - Abra um novo local (*Baseplate*) ou o arquivo do mapa no Roblox Studio;
-   - Na aba **Plugins**, clique no ícone do **Rojo**;
-   - Clique em **Connect** (porta padrão `34872`);
-   - Os arquivos de `src/` serão sincronizados em tempo real com o `ServerScriptService`, `ReplicatedStorage` e `StarterGui`.
+2. **Assets e Referências Visuais**:
+   - Acesse a pasta [`assets/`](assets/) para consultar ou adicionar as imagens conceituais, plantas baixas e modelos de referência utilizados nos prompts de IA.
 
 ---
 
 ## 🎨 Como Utilizar a Pasta `assets/`
 
-A pasta [`assets/`](assets/) foi especialmente preparada para receber materiais multimídia utilizados no prompt de IA e apresentados no vídeo:
-- Coloque em `assets/images/` as plantas baixas, diagramas e referências de iluminação;
-- Coloque em `assets/models/` os modelos exportados (`.obj`, `.fbx`, `.rbxm`) que serviram de referência para os algoritmos de geração de mapa;
-- Coloque em `assets/references/` os prompts e logs de auditoria dos múltiplos agentes.
+A pasta [`assets/`](assets/) é o local reservado para receber os materiais multimídia e referências utilizados durante o desenvolvimento com IA e apresentados no vídeo:
+- Imagens conceituais, plantas baixas e referências de iluminação;
+- Modelos 3D de apoio (`.obj`, `.fbx`, `.rbxm`) que serviram de referência espacial;
+- Prompts estruturados e capturas do Roblox Studio.
 
 ---
 
