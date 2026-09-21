@@ -178,7 +178,6 @@ ai-roblox-lab/
 │           └── Controllers/
 │               └── DropBagController.client.lua # Captura de input (tecla G) e notificações locais
 │
-├── default.project.json             # Mapeamento do projeto Rojo para a árvore DataModel
 ├── Plan.md                          # Documento completo de engenharia e auditoria das 15 fases
 ├── LICENSE                          # Licença MIT
 └── README.md                        # Documentação principal
