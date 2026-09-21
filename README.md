@@ -16,7 +16,6 @@
 Assista ao processo completo de criação, bastidores, erros e lições aprendidas no vídeo:
 
 **[▶️ Como fazer um jogo VIRAL no Roblox com IA (E o resultado me surpreendeu...) 🤖🎮](https://youtu.be/POzYDoPPEII)**  
-*Canal: [@dgurgel-info](https://www.youtube.com/@dgurgel-info)*
 
 ---
 
