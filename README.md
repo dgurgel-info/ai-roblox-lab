@@ -1,1 +1,239 @@
-# ai-roblox-lab
+# AI Roblox Lab — Blackwood Heist 🏦🕵️‍♂️
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Roblox](https://img.shields.io/badge/Platform-Roblox%20Studio-00A2FF?logo=roblox&logoColor=white)](https://www.roblox.com)
+[![Luau](https://img.shields.io/badge/Language-Luau%20--!strict-00A2FF)](https://luau-lang.org/)
+[![Rojo](https://img.shields.io/badge/Tool-Rojo-E74C3C)](https://rojo.space/)
+[![YouTube](https://img.shields.io/badge/YouTube-Assistir%20ao%20V%C3%ADdeo-FF0000?logo=youtube&logoColor=white)](https://youtu.be/POzYDoPPEII)
+[![AI Architecture](https://img.shields.io/badge/AI%20Stack-GPT%20%7C%20Gemini%20%7C%20Codex-brightgreen)](https://github.com/dgurgel-info/ai-roblox-lab)
+
+> **Projeto experimental de desenvolvimento de jogos com Inteligência Artificial no Roblox Studio**, combinando grandes modelos de linguagem (**GPT**, **Gemini**, **Codex**) e uma esteira de **múltiplos agentes autônomos em execução paralela** para planejar, codificar, auditar e testar uma experiência multiplayer completa do zero até o polimento cinematográfico.
+
+---
+
+## 📺 Vídeo Oficial no YouTube
+
+Assista ao processo completo de criação, bastidores, erros e lições aprendidas no vídeo:
+
+**[▶️ Como fazer um jogo VIRAL no Roblox com IA (E o resultado me surpreendeu...) 🤖🎮](https://youtu.be/POzYDoPPEII)**  
+*Canal: [@dgurgel-info](https://www.youtube.com/@dgurgel-info)*
+
+### Destaques do Experimento:
+- **Pergunta norteadora**: *Será que uma pessoa sem experiência prévia com a engine do Roblox Studio consegue criar um jogo funcional, complexo e jogável utilizando apenas IA?*
+- **Tempo de desenvolvimento**: Aproximadamente **20 horas de iteração contínua**.
+- **Resultado**: Uma experiência multiplayer completa e auditada para até 16 jogadores simultâneos, estruturada em **15 fases de implantação** com arquitetura profissional Rojo/Luau.
+- **Linha do Tempo do Vídeo**:
+  - `00:00` — Introdução: Jogo do Roblox criado 100% por IA
+  - `01:30` — Preparando a integração do Roblox Studio com MCP (Model Context Protocol)
+  - `02:30` — Tempo de desenvolvimento e modelos de IA (Codex, GPT e Gemini)
+  - `04:06` — Configuração técnica da IA no Roblox Studio
+  - `05:01` — Primeiro erro: A falta de referências visuais
+  - `06:01` — Lógica do jogo e teste dos NPCs
+  - `07:58` — Adicionando referências visuais
+  - `08:45` — Fase de refinamento, ajustes e iluminação dinâmica
+  - `11:35` — Conclusão e o futuro do desenvolvimento de games com IA
+
+---
+
+## 🤖 O Processo de Criação com IA (Multi-Agentes)
+
+A grande inovação metodológica demonstrada no projeto é a **orquestração de múltiplos agentes autônomos com papéis bem delineados**, evitando o erro comum de pedir um jogo inteiro em um único prompt monolítico.
+
+```text
+       ┌────────────────────────────────────────────────────────┐
+       │                 HUMAN OPERATOR / DESIGN                │
+       │   (Visão de Jogo, Restrições & Feedback do Playtest)   │
+       └───────────────────────────┬────────────────────────────┘
+                                   │
+                                   ▼
+       ┌────────────────────────────────────────────────────────┐
+       │              AGENTE 1: ARQUITETO (GPT)                 │
+       │   - Estruturação macro de requisitos e game design     │
+       │   - Definição da máquina de estados de rodada          │
+       │   - Decomposição em 15 fases técnicas sequenciais      │
+       └───────────────────────────┬────────────────────────────┘
+                                   │
+                                   ▼
+       ┌────────────────────────────────────────────────────────┐
+       │        AGENTE 2: ENGENHEIRO DE CÓDIGO (GEMINI/CODEX)   │
+       │   - Geração de código Luau estrito (--!strict)         │
+       │   - Serviços autoritativos (ServerScriptService)       │
+       │   - Controllers de input e UI (StarterPlayerScripts)   │
+       │   - Matemática vetorial 3D e cálculo de raycasting     │
+       └──────────────┬───────────────────────────▲─────────────┘
+                      │                           │
+            Código    │                   Correção│ e
+            Gerado    ▼                   Refinamento
+       ┌──────────────────────────────────────────┴─────────────┐
+       │             AGENTE 3: REVISOR / AUDITOR (GEMINI)       │
+       │   - Auditoria estrita de concorrência (Single-Claim)   │
+       │   - Verificação de exploits e vulnerabilidades de rede │
+       │   - Checagem de linha de visão sem "wall-hack"         │
+       │   - Validação de idempotência e resiliência (DataStore)│
+       └───────────────────────────┬────────────────────────────┘
+                                   │
+                         Validação │ Aprovada
+                                   ▼
+       ┌────────────────────────────────────────────────────────┐
+       │        AGENTE 4: INTEGRAÇÃO & AMBIENTE (MCP / ROJO)     │
+       │   - Sincronização via Rojo com o Roblox Studio         │
+       │   - Inspeção de hierarquia e injeção de testes         │
+       │   - Ajuste fino de Terrain Voxel, iluminação e física  │
+       └────────────────────────────────────────────────────────┘
+```
+
+### Divisão de Responsabilidades:
+
+1. **GPT / Codex (Estrutura e Arquitetura)**:
+   - Responsável pelo blueprint das mecânicas, fluxos de jogo, regras de balanceamento e pelo detalhamento exaustivo das 15 fases do plano de implantação ([`Plan.md`](Plan.md)).
+2. **Gemini (Raciocínio Profundo, Luau Estrito e Geometria 3D)**:
+   - Implementação especializada do código Luau (`--!strict`), resolução de equações vetoriais de produto escalar ($\vec{v} \cdot \vec{d} \ge \cos(55^\circ)$) para os cones de visão dos guardas, cálculo de trajetórias preditivas de interceptação policial e rebaixamento físico da galeria de esgoto.
+3. **Múltiplos Agentes Autônomos em Revisão**:
+   - Cada fase técnica passava por uma checagem cruzada: um agente propunha o código e outro analisava falhas de segurança autoritativa (ex.: garantir que o cliente nunca dite o valor de loot, velocidade física ou resultado de extração).
+4. **Superação de Limitações (A Falha das Referências Visuais)**:
+   - Conforme demonstrado no vídeo, sem referências visuais a IA tende a gerar blocos sem proporção humana ou fendas nas paredes. Ao introduzir plantas de referência, medições em studs e modelos 3D de apoio (armazenados na pasta [`assets/`](assets/)), a fidelidade espacial subiu drasticamente.
+
+---
+
+## 🎮 Sobre o Jogo: Blackwood Heist
+
+**Blackwood Heist** é uma experiência multiplayer cooperativa/competitiva de assalto tático no Roblox. Os jogadores infiltram a suntuosa mansão **Blackwood Estate**, burlam a segurança privada, roubam itens valiosos do cofre principal e devem escapar antes que o cerco policial seja concluído.
+
+### Filosofia Central:
+- **Tensão de Decisão**: A dificuldade não vem de punições arbitrárias, mas de escolhas: *por onde entrar, quanto loot carregar, aceitar perder velocidade pelo valor do saque, ou largar a bolsa física para correr mais rápido*.
+- **Estrutura em 3 Atos**:
+  - **Ato I — Infiltrate**: Furtividade, estudo de rotas e abertura de acessos silenciosos.
+  - **Ato II — Steal**: Coleta de loot, arrombamento de cofres e cumprimento de contratos sob risco crescente.
+  - **Ato III — Escape**: Corrida contra o tempo. Se a polícia chegar, as rotas normais são bloqueadas e os jogadores precisam usar rotas de emergência (como a galeria subterrânea do esgoto).
+- **Sem Pay-to-Win**: Toda vantagem é cosmética ou conquistada através do gameplay. Compras são estritamente bloqueadas durante perseguições.
+
+---
+
+## 🏆 As 15 Fases de Implantação (100% Concluídas)
+
+O desenvolvimento foi segmentado e auditado fase por fase diretamente no Roblox Studio via Rojo. Abaixo está o resumo técnico das 15 fases:
+
+| Fase | Título | Módulos Principais | Mecânicas e Entregáveis |
+| :---: | :--- | :--- | :--- |
+| **01** | **Fundação** | `RoundService`, `PlayerDataService`, `GameConfig`, `Enums` | Suporte a até 16 jogadores simultâneos. FSM de 11 estados de rodada autoritativos. Replicação de rede e HUD adaptativo pt-BR. |
+| **02** | **Map Blockout & Arquitetura** | `MapBuilder`, `MapDetailsService` | Mansão em 2 pavimentos + subsolo com cofre. Vedação completa sem furos na alvenaria, lajes sólidas, garagem com 12 studs de pé-direito e portas animadas em 90° via `TweenService`. |
+| **03** | **Interaction + Loot** | `ItemDefinitions`, `LootService`, `InventoryService` | Catálogo de 7 categorias e 6 raridades. Bloqueio atômico de concorrência (*Single-Claim Lock*) impedindo duplicação de itens. Inventário de 3 níveis com peso acumulado e feedback visual (`Highlight`). |
+| **04** | **Extraction** | `ExtractionService` | Pontos de extração convencionais (`FrontGate` e `VanExtraction`) com validação de proximidade física ($\le 15$ studs) e persistência autoritativa de recompensa. |
+| **05** | **Security & Stealth** | `SecurityService` | 6 níveis dinâmicos de alerta (0 a 5). Câmeras robotizadas com cone de visão cônico e `DetectionMeter`. Sistema de propagação sonora (passos, corrida, arrombamento e vidro quebrado). |
+| **06** | **Guard AI** | `GuardService` | Segurança privada autônoma com 7 estados (`Patrol`, `Investigate`, `Chase`, etc.). Linha de visão fisiológica autêntica via produto escalar ($\cos(55^\circ)$) e raycasts sem wall-hack. |
+| **07** | **Police Inbound** | `RoundService`, `PoliceService` | Contagem regressiva com avisos de rádio em 60s, 30s e 15s. Bloqueio automático das saídas convencionais e ativação de giroflex e sirenes nas viaturas da rua ($Z = -132$). |
+| **08** | **Police AI & Táticas** | `PoliceAIService`, `PoliceService` | 3 arquétipos táticos (`PatrolOfficer`, `Interceptor` com rota preditiva vetorial, `Searcher`). **Regras táticas**: não entram na casa, caçam apenas quem tem saque e a rua externa é zona neutra. |
+| **09** | **Escape Mode & Esgoto** | `EscapeService` | Rotas de emergência (`Forest`, `Rooftop`, `Sewer`). Galeria subterrânea física rebaixada para $Y = -12.60$, vão livre de 10 studs (sem corte de câmera), túnel de 148 studs e escadarias completas. |
+| **10** | **Weight + Drop Bag** | `InventoryService`, `DropBagService` | Curva de penalidade física de velocidade em 5 faixas. Mecânica de Drop Bag via **tecla `G`** restaurando velocidade instantaneamente e gerando bolsa física 3D recolhível no mundo. |
+| **11** | **Mecânica de Prisão** | `ArrestService`, `PoliceAIService` | Iniciação gradual de captura (`ArrestAttempt`) de 2.5 segundos reais a $\le 5$ studs. Evasão atlética por distância ou cobertura. Captura individual (`Busted`) sem interromper os colegas de equipe. |
+| **12** | **Progressão & Skills** | `PlayerDataService`, `HUDClient` | Sistema de níveis e XP. Árvore de habilidades com 9 perks em 3 ramos (**Ghost**, **Tech**, **Thief**). Catálogo de ferramentas com desbloqueio gradual por nível e contratos secundários. |
+| **13** | **Persistência Resiliente** | `PlayerDataService` | DataStore versionado (`v2`) com migração automática. Resiliência de rede com até 3 retries e *exponential backoff*. Proteção estrita **Anti-Wipe** bloqueando salvamento caso a carga inicial falhe. |
+| **14** | **Economia Anti-P2W** | `EconomyService`, `PurchaseService` | Developer Products e GamePasses validados via callback `ProcessReceipt` idempotente. Bloqueio total de compras durante perseguições ou tentativas de prisão. Zero vantagens desleais. |
+| **15** | **Polimento Cinematográfico** | `MapDetailsService`, `LightingDetailsService`, `PolishService` | Piscina Voxel com água volumétrica do Terrain e nado nativo (`Swimming`). Novo playground 3D da Loja do Criador (Asset `9377320356`). Ciclo diurno desacelerado (12 min) iniciando às 09:30. Skyline otimizado a 60 FPS estáveis. |
+
+---
+
+## 📁 Estrutura do Repositório
+
+O projeto segue a estrutura padrão do ecossistema [Rojo](https://rojo.space/):
+
+```text
+ai-roblox-lab/
+├── assets/                          # Pasta para modelos 3D, imagens de referência e plantas
+│   ├── images/                      # Imagens conceituais e mockups de UI
+│   ├── models/                      # Modelos 3D (.obj, .fbx, .rbxm) e referências de malha
+│   └── references/                  # Prompts, tabelas de design e capturas do Studio
+│
+├── src/                             # Código-fonte Luau estruturado
+│   ├── ReplicatedStorage/
+│   │   └── Blackwood/
+│   │       └── Shared/
+│   │           ├── Enums.lua        # Estados da rodada, raridades, ferramentas e arquétipos
+│   │           ├── GameConfig.lua   # Configuração centralizada de física, tempos e balanceamento
+│   │           └── ItemDefinitions.lua # Catálogo completo de itens e pesos
+│   │
+│   ├── ServerScriptService/
+│   │   ├── BlackwoodServer.server.lua # Ponto de entrada do servidor
+│   │   └── Services/
+│   │       ├── ArrestService.lua    # Mecânica gradual de prisão e teleporte
+│   │       ├── DropBagService.lua   # Instanciação e recolhimento de bolsas físicas 3D
+│   │       ├── EscapeService.lua    # Gestão de rotas de fuga alternativas
+│   │       ├── ExtractionService.lua# Validação de zonas normais de extração
+│   │       ├── GuardService.lua     # Inteligência artificial da segurança privada
+│   │       ├── InteractionService.lua # Prompts de interação e controle atômico
+│   │       ├── InventoryService.lua # Inventário, cálculo de peso e penalidade de velocidade
+│   │       ├── LootService.lua      # Distribuição e bloqueio atômico de saque
+│   │       ├── PlayerDataService.lua# Persistência resiliente com proteção Anti-Wipe
+│   │       ├── PoliceAIService.lua  # IA policial com 3 arquétipos e blackboard tático
+│   │       ├── PoliceService.lua    # Spawns, viaturas e sirenes espaciais 3D
+│   │       ├── RoundService.lua     # Máquina de estados de rodada (11 estados)
+│   │       └── SecurityService.lua  # Câmeras, propagação sonora e Lockdown
+│   │
+│   ├── StarterGui/
+│   │   └── MainHUD/
+│   │       └── HUD.client.lua       # Interface do usuário, modais de skills e loja
+│   │
+│   └── StarterPlayer/
+│       └── StarterPlayerScripts/
+│           └── Controllers/
+│               └── DropBagController.client.lua # Captura de input (tecla G) e notificações locais
+│
+├── default.project.json             # Mapeamento do projeto Rojo para a árvore DataModel
+├── Plan.md                          # Documento completo de engenharia e auditoria das 15 fases
+├── LICENSE                          # Licença MIT
+└── README.md                        # Documentação principal
+```
+
+---
+
+## 🚀 Como Executar o Projeto no Roblox Studio
+
+### Pré-requisitos
+1. [Roblox Studio](https://www.roblox.com/create) instalado.
+2. [Rojo CLI](https://rojo.space/docs/v7/getting-started/installation/) ou extensão do VS Code/Cursor.
+3. Plugin do Rojo instalado no Roblox Studio.
+
+### Passo a Passo
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/dgurgel-info/ai-roblox-lab.git
+   cd ai-roblox-lab
+   ```
+
+2. **Inicie o servidor do Rojo**:
+   ```bash
+   rojo serve
+   ```
+
+3. **Conecte com o Roblox Studio**:
+   - Abra um novo local (*Baseplate*) ou o arquivo do mapa no Roblox Studio;
+   - Na aba **Plugins**, clique no ícone do **Rojo**;
+   - Clique em **Connect** (porta padrão `34872`);
+   - Os arquivos de `src/` serão sincronizados em tempo real com o `ServerScriptService`, `ReplicatedStorage` e `StarterGui`.
+
+---
+
+## 🎨 Como Utilizar a Pasta `assets/`
+
+A pasta [`assets/`](assets/) foi especialmente preparada para receber materiais multimídia utilizados no prompt de IA e apresentados no vídeo:
+- Coloque em `assets/images/` as plantas baixas, diagramas e referências de iluminação;
+- Coloque em `assets/models/` os modelos exportados (`.obj`, `.fbx`, `.rbxm`) que serviram de referência para os algoritmos de geração de mapa;
+- Coloque em `assets/references/` os prompts e logs de auditoria dos múltiplos agentes.
+
+---
+
+## 📄 Licença
+
+Este projeto é disponibilizado sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Daniel de Morais Gurgel** ([@dgurgel-info](https://github.com/dgurgel-info)).
+
+- **YouTube**: [@dgurgel-info](https://www.youtube.com/@dgurgel-info)
+- **GitHub**: [dgurgel-info](https://github.com/dgurgel-info)
+
+Se este projeto ou o vídeo te ajudou a entender como utilizar Inteligência Artificial para criar experiências no Roblox, deixe uma estrela ⭐ no repositório e se inscreva no canal!
